@@ -31,9 +31,31 @@
     }
 }
 
+/* animation keyframes */
+@keyframes slideInFromBottom {
+    0% {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+.animate-on-scroll {
+    opacity: 0;
+    transition: opacity 0.5s ease-out;
+}
+
+.animate-on-scroll.visible {
+    animation: slideInFromBottom 1s forwards;
+}
+
+
 /* ensure that no one overflows x axis */
 html, body{
     overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 
 /* custom threshold */
@@ -44,6 +66,13 @@ html, body{
 .custom-font {
     font-family: 'RRollie';
 }
+.cursor-pointer {
+    cursor: pointer;
+}
+.custom-hover:hover {
+    border-bottom: 2px solid white; /* Adjust the thickness and color */
+    
+  }
 
 /*  LANDING CSS */
 .custom-landing {
@@ -68,6 +97,15 @@ html, body{
 .header-landing{
     font-family: 'Brown Sunflower';
     font-size: 72px;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
+                 0 0 20px rgba(255, 255, 255, 0.6),
+                 0 0 30px rgba(255, 255, 255, 0.4);
+}
+
+.logo {
+    filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.8)) 
+            drop-shadow(0 0 20px rgba(255, 255, 255, 0.6)) 
+            drop-shadow(0 0 30px rgba(255, 255, 255, 0.4));
 }
 
 .custom-landing .container {
@@ -81,7 +119,11 @@ ul {
     list-style: none;
     font-size: small;
     letter-spacing: 1px;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
+                 0 0 20px rgba(255, 255, 255, 0.6),
+                 0 0 30px rgba(255, 255, 255, 0.4);
 }
+
 
 /* Cakes CSS */
 .custom-cake-section {
@@ -95,6 +137,11 @@ ul {
     text-align: center;
     height: 100%;
     max-height: 100%;
+    transition: transform 0.3s ease;
+}
+
+.custom-cake-item:hover {
+    transform: translateY(-20px); 
 }
 
 .custom-cake-item::before {
@@ -123,6 +170,9 @@ ul {
     padding: 5px 10px;
     font-family: 'Brown Sunflower';
     font-size: 18px;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
+                 0 0 20px rgba(255, 255, 255, 0.6),
+                 0 0 30px rgba(255, 255, 255, 0.4);
     z-index: 2; 
 }
 
@@ -152,6 +202,16 @@ ul {
     height: 250px;
     padding: 1px;
 }
+
+/* cake collectiion css */
+.custom-collection-img {
+    transition: transform 0.3s ease;
+}
+
+.custom-collection-img:hover {
+    transform: translateY(-20px); 
+}
+
 
 /* css footer */
 .custom-footer-section {
