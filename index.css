@@ -1,0 +1,178 @@
+/* Custom Font Faces */
+@font-face {
+    font-family: 'Cromlin';
+    src: url('assets/CromlinDEMO-Regular.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Corporate S';
+    src: url('assets/Corporate S Light Regular.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'RRollie';
+    src: url('assets/RRollie Regular.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Sofia Pro';
+    src: url('assets/SofiaProRegCond.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Brown Sunflower';
+    src: url('assets/BROWN\ SUNFLOWER.ttf') format('truetype');
+}
+
+/* Media Queries */
+@media (min-width: 300px) and (max-width: 991px) {
+    .custom-nav-width {
+        width: 100%;
+    }
+}
+
+/* ensure that no one overflows x axis */
+html, body{
+    overflow-x: hidden;
+}
+
+/* custom threshold */
+.custom-height{
+    height: auto; 
+    min-height: 60vh; 
+}
+.custom-font {
+    font-family: 'RRollie';
+}
+
+/*  LANDING CSS */
+.custom-landing {
+    background-image: url('assets/banner.jpg');
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    position: relative;
+}
+
+.custom-landing::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3); 
+    z-index: 1; 
+}
+
+.header-landing{
+    font-family: 'Brown Sunflower';
+    font-size: 72px;
+}
+
+.custom-landing .container {
+    position: relative;
+    z-index: 2; 
+}
+
+ul {
+    font-family: 'Corporate S';
+    color: white;
+    list-style: none;
+    font-size: small;
+    letter-spacing: 1px;
+}
+
+/* Cakes CSS */
+.custom-cake-section {
+    height: 100%;
+    padding: 40px;
+}
+
+.custom-cake-item {
+    position: relative; 
+    display: inline-block;
+    text-align: center;
+    height: 100%;
+    max-height: 100%;
+}
+
+.custom-cake-item::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3); 
+    z-index: 1;
+}
+
+.custom-birthdaycake {
+    width: 100%;
+    height: 100%; 
+    object-fit: cover; 
+}
+
+.custom-cake-label {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    padding: 5px 10px;
+    font-family: 'Brown Sunflower';
+    font-size: 18px;
+    z-index: 2; 
+}
+
+/* css about section */
+.custom-about-section{
+    height: 100%;
+    padding-top: 50px;
+    padding-bottom: 20px;
+    background-color: black;
+}
+.custom-about-wrapper{
+    width: 90%;
+    line-height: 3;
+}
+.custom-about-p{
+    font-size: 14px;
+    color: rgb(169, 174, 179);
+    font-family: 'Cromlin';
+    text-align: justify;
+}
+.custom-about-title {
+    font-family: 'Brown Sunflower';
+}
+.custom-collection-img {
+    width: 100%;
+    object-fit: cover;
+    height: 250px;
+    padding: 1px;
+}
+
+/* css footer */
+.custom-footer-section {
+    height: 100%;
+    background-color: black;
+    padding: 40px;
+}
+.custom-input {
+    width: 100%; 
+    border: none; 
+    border-bottom: 2px solid white; 
+    outline: none; 
+    padding: 10px; 
+    font-size: 16px; 
+}
+
+.custom-input:focus {
+    border-bottom: 2px solid #ff5733; 
+}
+
+.custom-p-footer {
+    font-size: 13px;
+    line-height: 1;
+}
