@@ -70,8 +70,7 @@ html, body{
     cursor: pointer;
 }
 .custom-hover:hover {
-    border-bottom: 2px solid white; /* Adjust the thickness and color */
-    
+    border-bottom: 2px solid white; 
   }
 
 /*  LANDING CSS */
